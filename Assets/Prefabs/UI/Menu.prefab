@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 601343057052913166}
   - component: {fileID: 8977342590907013500}
   - component: {fileID: 8565523710426628997}
+  - component: {fileID: 4646366818231755894}
   m_Layer: 5
   m_Name: BtnExit
   m_TagString: Untagged
@@ -121,6 +122,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4646366818231755894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194114193583353713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68821b7141e82b48a801fdf5ba765dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalSprite: {fileID: 21300000, guid: 7d1fd973d0eb6ba478874f470b40193c, type: 3}
+  hoverSprite: {fileID: 21300000, guid: b2cfbdedf071ce347895e2d9cb28327e, type: 3}
+  buttonText: {fileID: 4683426515264968361}
 --- !u!1 &1060071901128711073
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,8 +409,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47
-  m_fontSizeBase: 47
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -447,6 +463,7 @@ GameObject:
   - component: {fileID: 1797520866268082420}
   - component: {fileID: 147630814399255142}
   - component: {fileID: 165682266827659977}
+  - component: {fileID: 444128124488189270}
   m_Layer: 5
   m_Name: BtnTutorial
   m_TagString: Untagged
@@ -556,6 +573,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &444128124488189270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732721021876739776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68821b7141e82b48a801fdf5ba765dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalSprite: {fileID: 21300000, guid: 7d1fd973d0eb6ba478874f470b40193c, type: 3}
+  hoverSprite: {fileID: 21300000, guid: b2cfbdedf071ce347895e2d9cb28327e, type: 3}
+  buttonText: {fileID: 3165602252364758715}
 --- !u!1 &4257892656377264124
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +600,7 @@ GameObject:
   - component: {fileID: 7317129970801738282}
   - component: {fileID: 6856481180484542019}
   - component: {fileID: 5443276229108218989}
+  - component: {fileID: 5216230460643161189}
   m_Layer: 5
   m_Name: BtnPlay
   m_TagString: Untagged
@@ -677,6 +710,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5216230460643161189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257892656377264124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68821b7141e82b48a801fdf5ba765dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalSprite: {fileID: 21300000, guid: 7d1fd973d0eb6ba478874f470b40193c, type: 3}
+  hoverSprite: {fileID: 21300000, guid: b2cfbdedf071ce347895e2d9cb28327e, type: 3}
+  buttonText: {fileID: 9183047194818012997}
 --- !u!1 &4839424182309680428
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +749,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4839424182309680428}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.92, y: 0.92, z: 0.92}
   m_ConstrainProportionsScale: 1
