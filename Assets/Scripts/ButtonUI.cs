@@ -9,8 +9,6 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public Sprite originalSprite;
     public Sprite hoverSprite;
 
-    public TextMeshProUGUI buttonText;
-
     void Start()
     {
         buttonImage = GetComponent<Image>();
@@ -27,11 +25,6 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         {
             buttonImage.sprite = hoverSprite;
         }
-
-        if (buttonText != null)
-        {
-            buttonText.fontStyle = FontStyles.Bold;
-        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -39,11 +32,6 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (buttonImage != null && originalSprite != null)
         {
             buttonImage.sprite = originalSprite;
-        }
-
-        if (buttonText != null)
-        {
-            buttonText.fontStyle = FontStyles.Normal;
         }
     }
 }
