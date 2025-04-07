@@ -1140,4 +1140,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuUI: {fileID: 4839424182309680428}
-  cameraTimeline: {fileID: 0}
+  cameraAnimator: {fileID: 0}
+  playerAnimator: {fileID: 0}

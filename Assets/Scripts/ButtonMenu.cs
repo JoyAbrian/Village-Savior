@@ -1,15 +1,18 @@
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class ButtonMenu : MonoBehaviour
 {
     public GameObject menuUI;
     public Animator cameraAnimator;
+    public GameObject player;
 
     public void StartGame()
     {
         menuUI.SetActive(false);
+
         cameraAnimator.SetTrigger("PlayGame");
+        player.GetComponent<Animator>().SetBool("isPlaying", true);
+        player.GetComponent<AimController>().enabled = true;
     }
 
     public void Instruction()
