@@ -120,7 +120,14 @@ public class AimController : MonoBehaviour
 
             if (targetEnemy != null)
             {
-                Destroy(targetEnemy);
+                EnemyRagdollController ragdoll = targetEnemy.GetComponent<EnemyRagdollController>();
+
+                if (ragdoll != null)
+                {
+                    ragdoll.ActivateRagdoll();
+                    Destroy(targetEnemy, 5f);
+                }
+
                 aimPivot.enemiesInRange.RemoveAt(0);
             }
         }

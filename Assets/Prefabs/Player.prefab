@@ -203,7 +203,7 @@ MonoBehaviour:
   aimSpeed: 5
   horizontalLimit: {x: 170, y: 230}
   verticalLimit: {x: -30, y: 45}
-  fireCooldown: 1.3
+  fireCooldown: 1.4
   playerCamera: {fileID: 0}
   normalFOV: 60
   zoomedFOV: 40
