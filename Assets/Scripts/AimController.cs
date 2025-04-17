@@ -1,12 +1,14 @@
+using System.Collections;
 using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
     [Header("Aim Settings")]
-    public Transform aimPivot;
+    public AimPivot aimPivot;
     public float aimSpeed = 5f;
     public Vector2 horizontalLimit = new Vector2(-60f, 60f);
     public Vector2 verticalLimit = new Vector2(-30f, 45f);
+    public float fireCooldown = 1.3f;
 
     [Header("Camera Settings")]
     public Camera playerCamera;
@@ -22,6 +24,7 @@ public class AimController : MonoBehaviour
     private Quaternion defaultPlayerRotation;
     private Quaternion defaultCameraRotation;
     private Animator playerAnimator;
+    private bool canFire = true;
 
     void Start()
     {
@@ -78,6 +81,11 @@ public class AimController : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0f, currentRotation.x, 0f);
             playerCamera.transform.localRotation = Quaternion.Euler(currentRotation.y, 0f, 0f);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                FiringArrow();
+            }
         }
         else
         {
@@ -98,5 +106,32 @@ public class AimController : MonoBehaviour
     {
         float targetFOV = isAiming ? zoomedFOV : normalFOV;
         playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * zoomSpeed);
+    }
+
+    void FiringArrow()
+    {
+        if (!canFire) return;
+
+        playerAnimator.SetTrigger("FireArrow");
+
+        if (aimPivot.enemiesInRange.Count > 0)
+        {
+            GameObject targetEnemy = aimPivot.enemiesInRange[0];
+
+            if (targetEnemy != null)
+            {
+                Destroy(targetEnemy);
+                aimPivot.enemiesInRange.RemoveAt(0);
+            }
+        }
+
+        StartCoroutine(FireCooldownRoutine());
+    }
+
+    private IEnumerator FireCooldownRoutine()
+    {
+        canFire = false;
+        yield return new WaitForSeconds(fireCooldown);
+        canFire = true;
     }
 }

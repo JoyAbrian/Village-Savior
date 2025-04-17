@@ -17,6 +17,11 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
+        if (GlobalVariables.gameState != "Game")
+        {
+            return;
+        }
+
         float cubeWidth = transform.localScale.x;
         Vector3 cubePosition = transform.position;
 

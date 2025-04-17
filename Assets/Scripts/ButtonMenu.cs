@@ -9,7 +9,7 @@ public class ButtonMenu : MonoBehaviour
     public void StartGame()
     {
         menuUI.SetActive(false);
-
+        GlobalVariables.gameState = "Game";
         cameraAnimator.SetTrigger("PlayGame");
         player.GetComponent<Animator>().SetBool("isPlaying", true);
         player.GetComponent<AimController>().enabled = true;

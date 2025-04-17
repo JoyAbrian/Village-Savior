@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4084291087635699391}
+  - component: {fileID: 4616780492305202861}
+  - component: {fileID: 2536893793346133773}
   m_Layer: 0
   m_Name: Aim Pivot
   m_TagString: Untagged
@@ -24,13 +26,47 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7614272722503648197}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9659259, z: -0, w: -0.25881898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.359, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5603247833243411677}
-  m_LocalEulerAnglesHint: {x: 0, y: 210, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4616780492305202861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614272722503648197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.79, y: 12.08, z: 130}
+  m_Center: {x: 0, y: -4.84, z: 63.6}
+--- !u!114 &2536893793346133773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614272722503648197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8357dacc68f3247967bd409413ad35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRange: []
 --- !u!1001 &5352533976513643318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,10 +199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a203f025d0f264048b82c864d6f801bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimPivot: {fileID: 4084291087635699391}
+  aimPivot: {fileID: 2536893793346133773}
   aimSpeed: 5
   horizontalLimit: {x: 170, y: 230}
   verticalLimit: {x: -30, y: 45}
+  fireCooldown: 1.3
   playerCamera: {fileID: 0}
   normalFOV: 60
   zoomedFOV: 40
